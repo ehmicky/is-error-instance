@@ -6,14 +6,12 @@
 
 Check if a value is an `Error` instance.
 
-Work in progress!
-
-# Features
-
 # Example
 
 ```js
 import isErrorInstance from 'is-error-instance'
+
+console.log(isErrorInstance(new Error(''))) // true
 ```
 
 # Install
@@ -28,19 +26,10 @@ not `require()`.
 
 # API
 
-## isErrorInstance(value, options?)
+## isErrorInstance(value)
 
 `value` `any`\
-`options` [`Options?`](#options)\
-_Return value_: [`object`](#return-value)
-
-### Options
-
-Object with the following properties.
-
-### Return value
-
-Object with the following properties.
+_Return value_: `boolean`
 
 # Related projects
 

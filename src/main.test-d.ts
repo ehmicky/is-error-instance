@@ -1,8 +1,5 @@
-import { expectType, expectAssignable } from 'tsd'
+import { expectType } from 'tsd'
 
-import isErrorInstance, { Options } from './main.js'
+import isErrorInstance from './main.js'
 
-expectType<object>(isErrorInstance(true))
-
-isErrorInstance(true, {})
-expectAssignable<Options>({})
+expectType<boolean>(isErrorInstance(true))

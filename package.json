@@ -34,7 +34,7 @@
     "testing",
     "typescript"
   ],
-  "license": "Apache-2.0",
+  "license": "MIT",
   "homepage": "https://www.github.com/ehmicky/is-error-instance",
   "repository": "ehmicky/is-error-instance",
   "bugs": {
@@ -45,9 +45,9 @@
     "lib": "src",
     "test": "test"
   },
-  "dependencies": {},
   "devDependencies": {
-    "@ehmicky/dev-tasks": "^1.0.93"
+    "@ehmicky/dev-tasks": "^1.0.93",
+    "test-each": "^5.4.0"
   },
   "engines": {
     "node": ">=14.18.0"
