@@ -11,6 +11,8 @@ iframes or Node.js [`vm`](https://nodejs.org/api/vm.html).
 
 # Example
 
+<!-- eslint-disable fp/no-proxy -->
+
 ```js
 import isErrorInstance from 'is-error-instance'
 
@@ -25,6 +27,17 @@ console.log(isErrorInstance(new AnyOtherError(''))) // true
 
 console.log(isErrorInstance(new DOMException(''))) // true
 console.log(isErrorInstance(new DOMError(''))) // true
+
+console.log(isErrorInstance(new Proxy(new Error(''), {}))) // true
+console.log(
+  isErrorInstance(
+    new Proxy(new Error(''), {
+      getPrototypeOf() {
+        throw new Error('')
+      },
+    }),
+  ),
+) // false
 ```
 
 # Install
