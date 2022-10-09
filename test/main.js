@@ -4,15 +4,6 @@ import test from 'ava'
 import isErrorInstance from 'is-error-instance'
 import { each } from 'test-each'
 
-each(
-  ['test', undefined, null, {}, Object.create(null)],
-  ({ title }, nonError) => {
-    test(`Detects non-errors | ${title}`, (t) => {
-      t.false(isErrorInstance(nonError))
-    })
-  },
-)
-
 // eslint-disable-next-line fp/no-class
 class ChildError extends Error {}
 // eslint-disable-next-line fp/no-mutation
@@ -27,6 +18,8 @@ each(
     ...['Error', 'DOMException', 'DOMError', 'Exception'].map((tag) => ({
       [Symbol.toStringTag]: tag,
     })),
+    // eslint-disable-next-line fp/no-proxy
+    new Proxy(new Error('test'), {}),
   ],
   ({ title }, error) => {
     test(`Detects errors | ${title}`, (t) => {
@@ -37,38 +30,30 @@ each(
 
 each(
   [
-    {
-      title: 'none',
-      proxy: {},
-      isError: true,
-    },
-    {
-      title: 'getPrototypeOf',
-      proxy: {
-        getPrototypeOf() {
-          throw new Error('unsafe')
-        },
+    'test',
+    undefined,
+    null,
+    {},
+    Object.create(null),
+    // eslint-disable-next-line fp/no-proxy
+    new Proxy(new Error('test'), {
+      getPrototypeOf() {
+        throw new Error('unsafe')
       },
-      isError: false,
-    },
-    {
-      title: 'get',
-      proxy: {
-        getPrototypeOf() {
-          throw new Error('unsafe')
-        },
-        get() {
-          throw new Error('unsafe')
-        },
+    }),
+    // eslint-disable-next-line fp/no-proxy
+    new Proxy(new Error('test'), {
+      getPrototypeOf() {
+        throw new Error('unsafe')
       },
-      isError: false,
-    },
+      get() {
+        throw new Error('unsafe')
+      },
+    }),
   ],
-  ({ title }, { proxy, isError }) => {
-    test(`Detects errors in proxy | ${title}`, (t) => {
-      // eslint-disable-next-line fp/no-proxy
-      const error = new Proxy(new Error('test'), proxy)
-      t.is(isErrorInstance(error), isError)
+  ({ title }, nonError) => {
+    test(`Detects non-errors | ${title}`, (t) => {
+      t.false(isErrorInstance(nonError))
     })
   },
 )
