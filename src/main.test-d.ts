@@ -2,4 +2,5 @@ import { expectType } from 'tsd'
 
 import isErrorInstance from './main.js'
 
-expectType<boolean>(isErrorInstance(true))
+expectType<false>(isErrorInstance(true))
+expectType<true>(isErrorInstance(new Error('')))

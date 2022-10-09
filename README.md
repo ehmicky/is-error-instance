@@ -6,12 +6,25 @@
 
 Check if a value is an `Error` instance.
 
+This is like `value instanceof Error` except it works across realms, such as
+iframes or Node.js [`vm`](https://nodejs.org/api/vm.html).
+
 # Example
 
 ```js
 import isErrorInstance from 'is-error-instance'
 
 console.log(isErrorInstance(new Error(''))) // true
+console.log(isErrorInstance('')) // false
+
+console.log(isErrorInstance(new TypeError(''))) // true
+console.log(isErrorInstance(new AnyOtherError(''))) // true
+
+console.log(isErrorInstance(new DOMException(''))) // true
+console.log(isErrorInstance(new DOMError(''))) // true
+
+const CrossRealmError = vm.runInNewContext('Error')
+console.log(isErrorInstance(new CrossRealmError(''))) // true
 ```
 
 # Install
