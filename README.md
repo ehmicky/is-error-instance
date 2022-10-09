@@ -17,14 +17,14 @@ import isErrorInstance from 'is-error-instance'
 console.log(isErrorInstance(new Error(''))) // true
 console.log(isErrorInstance('')) // false
 
+const CrossRealmError = vm.runInNewContext('Error')
+console.log(isErrorInstance(new CrossRealmError(''))) // true
+
 console.log(isErrorInstance(new TypeError(''))) // true
 console.log(isErrorInstance(new AnyOtherError(''))) // true
 
 console.log(isErrorInstance(new DOMException(''))) // true
 console.log(isErrorInstance(new DOMError(''))) // true
-
-const CrossRealmError = vm.runInNewContext('Error')
-console.log(isErrorInstance(new CrossRealmError(''))) // true
 ```
 
 # Install
@@ -45,6 +45,31 @@ not `require()`.
 _Return value_: `boolean`
 
 # Related projects
+
+- [`modern-errors`](https://github.com/ehmicky/modern-errors): Handle errors
+  like it's 2022 🔮
+- [`error-custom-class`](https://github.com/ehmicky/error-custom-class): Create
+  one error class
+- [`error-class-utils`](https://github.com/ehmicky/error-class-utils): Utilities
+  to properly create error classes
+- [`error-serializer`](https://github.com/ehmicky/error-serializer): Convert
+  errors to/from plain objects
+- [`merge-error-cause`](https://github.com/ehmicky/merge-error-cause): Merge an
+  error with its `cause`
+- [`normalize-exception`](https://github.com/ehmicky/normalize-exception):
+  Normalize exceptions/errors
+- [`set-error-class`](https://github.com/ehmicky/set-error-class): Properly
+  update an error's class
+- [`set-error-message`](https://github.com/ehmicky/set-error-message): Properly
+  update an error's message
+- [`set-error-props`](https://github.com/ehmicky/set-error-props): Properly
+  update an error's properties
+- [`error-cause-polyfill`](https://github.com/ehmicky/error-cause-polyfill):
+  Polyfill `error.cause`
+- [`handle-cli-error`](https://github.com/ehmicky/handle-cli-error): 💣 Error
+  handler for CLI applications 💥
+- [`log-process-errors`](https://github.com/ehmicky/log-process-errors): Show
+  some ❤ to Node.js process errors
 
 # Support
 
