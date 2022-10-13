@@ -1,6 +1,6 @@
 import test from 'ava'
-import templateName from 'template-name'
+import isErrorInstance from 'is-error-instance'
 
 test('Dummy test', (t) => {
-  t.true(templateName(true))
+  t.true(isErrorInstance(true))
 })
