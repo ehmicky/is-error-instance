@@ -1,9 +1,9 @@
-[![Node](https://img.shields.io/badge/-Node.js-909090?logo=node.js&colorA=gray&logoColor=66cc33)](https://www.npmjs.com/package/is-error-instance)
-[![Browsers](https://img.shields.io/badge/-Browsers-909090?logo=firefox&colorA=gray)](https://unpkg.com/is-error-instance?module)
-[![TypeScript](https://img.shields.io/badge/-Typed-909090?logo=typescript&colorA=gray&logoColor=0096ff)](/types/main.d.ts)
-[![Codecov](https://img.shields.io/badge/-Tested%20100%25-909090?logo=codecov&colorA=gray)](https://codecov.io/gh/ehmicky/is-error-instance)
-[![Twitter](https://img.shields.io/badge/-Twitter-909090.svg?logo=twitter&colorA=gray)](https://twitter.com/intent/follow?screen_name=ehmicky)
-[![Medium](https://img.shields.io/badge/-Medium-909090.svg?logo=medium&colorA=gray)](https://medium.com/@ehmicky)
+[![Node](https://img.shields.io/badge/-Node.js-808080?logo=node.js&colorA=gray&logoColor=66cc33)](https://www.npmjs.com/package/is-error-instance)
+[![Browsers](https://img.shields.io/badge/-Browsers-808080?logo=firefox&colorA=gray)](https://unpkg.com/is-error-instance?module)
+[![TypeScript](https://img.shields.io/badge/-Typed-808080?logo=typescript&colorA=gray&logoColor=0096ff)](/types/main.d.ts)
+[![Codecov](https://img.shields.io/badge/-Tested%20100%25-808080?logo=codecov&colorA=gray)](https://codecov.io/gh/ehmicky/is-error-instance)
+[![Twitter](https://img.shields.io/badge/-Twitter-808080.svg?logo=twitter&colorA=gray)](https://twitter.com/intent/follow?screen_name=ehmicky)
+[![Medium](https://img.shields.io/badge/-Medium-808080.svg?logo=medium&colorA=gray)](https://medium.com/@ehmicky)
 
 Check if a value is an `Error` instance.
 
