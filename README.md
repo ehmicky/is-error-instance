@@ -18,27 +18,25 @@ iframes or Node.js [`vm`](https://nodejs.org/api/vm.html).
 ```js
 import isErrorInstance from 'is-error-instance'
 
-console.log(isErrorInstance(new Error(''))) // true
-console.log(isErrorInstance('')) // false
+isErrorInstance(new Error('')) // true
+isErrorInstance('') // false
 
 const CrossRealmError = vm.runInNewContext('Error')
-console.log(isErrorInstance(new CrossRealmError(''))) // true
+isErrorInstance(new CrossRealmError('')) // true
 
-console.log(isErrorInstance(new TypeError(''))) // true
-console.log(isErrorInstance(new AnyOtherError(''))) // true
+isErrorInstance(new TypeError('')) // true
+isErrorInstance(new AnyOtherError('')) // true
 
-console.log(isErrorInstance(new DOMException(''))) // true
-console.log(isErrorInstance(new DOMError(''))) // true
+isErrorInstance(new DOMException('')) // true
+isErrorInstance(new DOMError('')) // true
 
-console.log(isErrorInstance(new Proxy(new Error(''), {}))) // true
-console.log(
-  isErrorInstance(
-    new Proxy(new Error(''), {
-      getPrototypeOf() {
-        throw new Error('')
-      },
-    }),
-  ),
+isErrorInstance(new Proxy(new Error(''), {})) // true
+isErrorInstance(
+  new Proxy(new Error(''), {
+    getPrototypeOf() {
+      throw new Error('')
+    },
+  }),
 ) // false
 ```
 
