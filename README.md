@@ -1,4 +1,4 @@
-[![Codecov](https://img.shields.io/codecov/c/github/ehmicky/is-error-instance.svg?label=tested&logo=codecov)](https://codecov.io/gh/ehmicky/is-error-instance)
+[![Codecov](https://img.shields.io/badge/-Tested%20100%25-brightgreen?logo=codecov&colorA=gray)](https://codecov.io/gh/ehmicky/is-error-instance)
 [![TypeScript](https://img.shields.io/badge/-Typed-brightgreen?logo=typescript&colorA=gray&logoColor=0096ff)](/types/main.d.ts)
 [![Node](https://img.shields.io/badge/-Node.js-brightgreen?logo=node.js&colorA=gray&logoColor=66cc33)](https://www.npmjs.com/package/is-error-instance)
 [![Browsers](https://img.shields.io/badge/-Browsers-brightgreen?logo=firefox&colorA=gray)](https://en.wikipedia.org/wiki/Isomorphic_JavaScript)
