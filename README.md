@@ -1,7 +1,7 @@
 [![Node](https://img.shields.io/badge/-Node.js-brightgreen?logo=node.js&colorA=gray&logoColor=66cc33)](https://www.npmjs.com/package/is-error-instance)
 [![Browsers](https://img.shields.io/badge/-Browsers-brightgreen?logo=firefox&colorA=gray)](https://en.wikipedia.org/wiki/Isomorphic_JavaScript)
-[![Codecov](https://img.shields.io/badge/-Tested%20100%25-brightgreen?logo=codecov&colorA=gray)](https://codecov.io/gh/ehmicky/is-error-instance)
 [![TypeScript](https://img.shields.io/badge/-Typed-brightgreen?logo=typescript&colorA=gray&logoColor=0096ff)](/types/main.d.ts)
+[![Codecov](https://img.shields.io/badge/-Tested%20100%25-brightgreen?logo=codecov&colorA=gray)](https://codecov.io/gh/ehmicky/is-error-instance)
 [![Twitter](https://img.shields.io/badge/-Twitter-brightgreen.svg?logo=twitter&colorA=gray)](https://twitter.com/intent/follow?screen_name=ehmicky)
 [![Medium](https://img.shields.io/badge/-Medium-brightgreen.svg?logo=medium&colorA=gray)](https://medium.com/@ehmicky)
 
