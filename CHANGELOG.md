@@ -1,3 +1,9 @@
+# 1.4.0
+
+## Features
+
+- Improve documentation
+
 # 1.3.0
 
 ## Features
