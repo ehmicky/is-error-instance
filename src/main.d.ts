@@ -28,7 +28,5 @@
  * ) // false
  * ```
  */
-// eslint-disable-next-line import/export
 export default function isErrorInstance(value: Error): true
-// eslint-disable-next-line import/export
 export default function isErrorInstance(value: any): false
