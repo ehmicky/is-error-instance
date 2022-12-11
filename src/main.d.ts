@@ -28,5 +28,6 @@
  * ) // false
  * ```
  */
-export default function isErrorInstance(value: Error): true
-export default function isErrorInstance(value: unknown): false
+export default function isErrorInstance<T>(
+  value: T,
+): T extends Error ? true : false
