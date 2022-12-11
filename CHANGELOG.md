@@ -1,3 +1,9 @@
+# 1.6.0
+
+## Features
+
+- Migrate to TypeScript
+
 # 1.5.0
 
 ## Features
