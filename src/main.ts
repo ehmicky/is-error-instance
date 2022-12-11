@@ -28,6 +28,36 @@
  * ) // false
  * ```
  */
-export default function isErrorInstance<T>(
-  value: T,
-): T extends Error ? true : false
+const isErrorInstance = <T>(value: T) =>
+  (isInstanceOfError(value) || hasErrorTag(value)) as ErrorCheck<T>
+
+export default isErrorInstance
+
+type ErrorCheck<T> = T extends Error ? true : false
+
+const isInstanceOfError = (value: unknown) => {
+  try {
+    return value instanceof Error
+  } catch {
+    return false
+  }
+}
+
+const hasErrorTag = (value: unknown) => {
+  try {
+    return ERROR_TAGS.has(Object.prototype.toString.call(value))
+  } catch {
+    return false
+  }
+}
+
+const ERROR_TAGS = new Set([
+  // Cross-realm errors
+  '[object Error]',
+  // Browsers
+  '[object DOMException]',
+  // Browsers (deprecated)
+  '[object DOMError]',
+  // Sentry
+  '[object Exception]',
+])
