@@ -37,16 +37,16 @@ each(
     Object.create(null),
     // eslint-disable-next-line fp/no-proxy
     new Proxy(new Error('test'), {
-      getPrototypeOf() {
+      getPrototypeOf: () => {
         throw new Error('unsafe')
       },
     }),
     // eslint-disable-next-line fp/no-proxy
     new Proxy(new Error('test'), {
-      getPrototypeOf() {
+      getPrototypeOf: () => {
         throw new Error('unsafe')
       },
-      get() {
+      get: () => {
         throw new Error('unsafe')
       },
     }),

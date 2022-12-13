@@ -33,7 +33,7 @@ isErrorInstance(new DOMError('')) // true
 isErrorInstance(new Proxy(new Error(''), {})) // true
 isErrorInstance(
   new Proxy(new Error(''), {
-    getPrototypeOf() {
+    getPrototypeOf: () => {
       throw new Error('')
     },
   }),

@@ -1,9 +1,10 @@
 // Check if a value is an error instance
-export default function isErrorInstance(value) {
-  return isInstanceOfError(value) || hasErrorTag(value)
-}
+const isErrorInstance = (value) =>
+  isInstanceOfError(value) || hasErrorTag(value)
 
-const isInstanceOfError = function (value) {
+export default isErrorInstance
+
+const isInstanceOfError = (value) => {
   try {
     return value instanceof Error
   } catch {
@@ -11,7 +12,7 @@ const isInstanceOfError = function (value) {
   }
 }
 
-const hasErrorTag = function (value) {
+const hasErrorTag = (value) => {
   try {
     return ERROR_TAGS.has(protoToString.call(value))
   } catch {
