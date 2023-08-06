@@ -42,7 +42,10 @@
   ],
   "license": "MIT",
   "homepage": "https://www.github.com/ehmicky/is-error-instance",
-  "repository": "ehmicky/is-error-instance",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ehmicky/is-error-instance.git"
+  },
   "bugs": {
     "url": "https://github.com/ehmicky/is-error-instance/issues"
   },
