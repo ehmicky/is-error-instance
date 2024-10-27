@@ -53,6 +53,7 @@ each(
   ],
   ({ title }, nonError) => {
     test(`Detects non-errors | ${title}`, (t) => {
+      // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
       t.false(isErrorInstance(nonError))
     })
   },
